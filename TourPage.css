@@ -1,0 +1,57 @@
+.mySlides{
+display:none;
+}
+
+.marginTop{
+margin-top:25px;
+}
+
+.error{
+display:block;
+color:red;
+}
+
+alert{
+	display:none;
+}
+
+/***************/
+
+.textFly {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+}
+.textFly h3 {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: left;
+ /* Apply animation to this element */	
+ animation: textFly 5s linear infinite alternate;
+}
+
+/* Move it (define the animation) */
+
+@keyframes textFly {
+ 0%   { 
+
+ transform: translateX(70%); 		
+ }
+ 100% { 
+
+ transform: translateX(0%); 
+ }
+}
+/**************************/
+
+
+
+
+/*********Donuts css*************/
+.row{
+display:inline;
+white-space:nowrap;
+}
