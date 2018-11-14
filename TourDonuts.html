@@ -1,0 +1,106 @@
+<div ng-controller="myDonuts as main"><!--In this line is declare whitch controller you use -->
+<div  id="topBar" class="w3-top">
+		<div id="topContent" class="w3-bar w3-white w3-card">
+			<a ng-click="scrollTo('bugerHome')" class="w3-bar-item w3-wide w3-button w3-ripple"><b>Gourmet au Catering</b></a>
+			<div class="w3-right">
+			<a ng-click="scrollTo('routeToAboutContainer')"  class="w3-bar-item w3-wide w3-button w3-ripple">About</a>
+			<a ng-click="scrollTo('routeMeneContainer')"  class="w3-bar-item w3-wide w3-button w3-ripple">Menu</a>
+			<a ng-click="scrollTo('routeToContactContainer')" class="w3-bar-item w3-wide w3-button w3-ripple">Contact</a>
+			<a href="#" class="w3-bar-item w3-wide w3-button w3-ripple">Home</a>
+			</div>
+		</div>
+	
+	</div><!-- topbar -->
+	
+	<!--BurgerImg  -->
+	<div id="bugerHome"></div>
+	<div id="burgerImg" class="w3-content w3-display-container w3-margin-bottom" style="max-width:1600px; min-width:800px;">
+		<img class="w3-image" src="../Img/hamburger.jpg" alt="hamburgerImg" />
+		<h1 class="w3-display-bottomleft w3-padding-large w3-opacity">Le Catering</h1>
+	</div><!-- BurgerImg -->
+	
+	<!-- pageContent -->
+	<div id="pageContent" class="w3-content w3-container" style="max-width:1100px;">
+	
+		<div id="routeToAboutContainer"></div>
+		<div id="AboutContainer" class="w3-row"  >
+			<div id="AboutImg" class="w3-col m6 w3-padding-32">
+			<Img class="w3-image w3-round"  src="../Img/tablesetting2.jpg"/>
+			</div>
+			<div id="AboutText" class="w3-col m6" style="padding-left:100px; padding-top:80px;">	
+			<h1 class="w3-wide  w3-center" style="margin-bottom:40px;"><b>About Catering</b></h1>
+			<p class="w3-wide w3-margin-top w3-center">Tradition since 1889</p>	
+			<p>The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use<span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
+			<p  class="w3-opacity w3-margin-top">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+		</div>
+		
+		<hr>
+		<div id="routeMeneContainer"></div>
+		<div id="MenuContainer" class="w3-row w3-margin-top">
+			<div id="MenuText" class="w3-col m6 w3-padding-32">
+				<h1 class="w3-center w3-wide " style="padding-bottom:40px;"><b>Our Menu</b></h1>
+				<h3 class="w3-wide">Bread Basket</h3>
+				<p class="w3-opacity " style="padding-bottom:35px;">Assortment of fresh baked fruit breads and muffins 5.50</p>
+				<h3 class="w3-wide">Honey Almond Granola with Fruits</h3>
+				<p class="w3-opacity " style="padding-bottom:35px;">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+				<h3 class="w3-wide">Belgian Waffle</h3>
+				<p class="w3-opacity " style="padding-bottom:35px;">Vanilla flavored batter with malted flour 7.50</p>
+				<h3 class="w3-wide">Scrambled eggs</h3>
+				<p class="w3-opacity " style="padding-bottom:35px;">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+				<h3 class="w3-wide">Blueberry Pancakes</h3>
+				<p class="w3-opacity " style="padding-bottom:35px;">With syrup, butter and lots of berries 8.50</p>
+			</div>
+			<div id="MenuImg" class="w3-col m6 w3-margin-top" style="padding-left:100px;">
+				<img src="../Img/tablesetting.jpg" class="w3-image" alt="TablesettingImg"/>
+			</div>
+		</div>
+		
+		<hr>
+		<div id="routeToContactContainer"></div>
+		<div id="ContactContainer" class="w3-content w3-margin-top" style="margin-bottom:120px;">
+			<h1 class="w3-wide" style="padding-top:35px;padding-bottom:35px;"><b>Contact</b></h1>
+			<p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p><br>
+			<p class="w3-text-green" style="font-size:20px;"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p><br>
+			<p style="padding-bottom:35px;">You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
+			<form name="menuInput">
+			<input name="menuName" placeholder="NAME" class="w3-input" type="text" ng-model="main.menuInputName" required/><br>
+			<input name="menuPeople" placeholder="People Amount" class="w3-input" type="number" ng-model="main.menuInputPeople" required/><br>
+<!--			<input name="menuDate" class="w3-input" placeholder="Date and Time"  type="datetime-local"  ng-model="main.menuInputDate" required/><br>-->
+			<div>Booking Date:</div><br>
+			<div class="w3-bar ">
+			<p class="w3-bar-item" style="font-size:20px;white-space:nowrap;">2018-</p>
+			<select name="Month" ng-change="main.selectMonthChange(main.selectMonth)" style="margin-top:25px;" class="w3-bar-item" ng-model="main.selectMonth" ng-options="x for x in main.nowMonth" required></select>
+			<p class="w3-bar-item" style="margin-top:20px;font-size:20px;">月</p>	
+			<select name="Day" style="margin-top:25px;" class="w3-bar-item" ng-model="main.selectDay" ng-options="y for y in main.nowDays" required></select>
+			<p class="w3-bar-item" style="margin-top:20px;font-size:20px;">日</p>
+			</div><br>
+			<input name="menuMessage" ng-model="main.menuInputMessage" placeholder="Leave your Message" class="w3-input" type="text" required/><br>
+			<button ng-click="main.sendPress(main.menuInputName,main.menuInputPeople,main.selectMonth,main.selectDay,main.menuInputMessage)" class="w3-button w3-teal w3-ripple" ng-disabled="menuInput.$invalid">Send</button>
+			</form>
+		</div>
+		
+		<!-- sendPress popup -->
+		<div class="w3-modal" id="sendPopup">
+			<div class="w3-wide w3-content w3-container w3-teal w3-text-white w3-padding-32" style="text-align:left;margin-top:5%;padding-left:15%;">
+				<div><p>Name : {{main.menuInputName}}</p></div>
+				<div><p>People Amount : {{main.menuInputPeople}}</p></div>
+				<div><p>Booking Date : {{main.BookingDate}}</p></div>
+				<div><p>Message : {{main.menuInputMessage}}</p></div>
+				<button ng-click="main.selectAccept()" class="w3-button w3-ripple w3-blue">Accept</button>
+				<button ng-click="main.selectCancel()" class="w3-button w3-ripple w3-red">Cancel</button>
+			</div>
+			
+		</div>
+		
+		<!-- SendPress success popup -->
+		<div class="w3-modal"  id="sendPressSuccessOK">
+			<div class="w3-container w3-content w3-center w3-teal" style="margin-top:15%;">
+				<h1 class="w3-wide w3-text-white">Booking Success!</h1>
+				<button ng-click="main.sendPressSuccess()" class="w3-button w3-ripple">ok</button>
+			</div>
+		</div>
+	</div>
+	
+
+</div><!-- biggest content -->
